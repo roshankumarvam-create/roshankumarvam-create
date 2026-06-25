@@ -1,26 +1,43 @@
 <h1 align="center">Roshan Kumar</h1>
 <p align="center">
-  <b>AI / ML Engineer · Computational Neuroscience</b><br>
-  Building biomedical AI pipelines and full-stack ML systems @ Sudha Gopalakrishnan Brain Centre, IIT Madras
+  <b>AI / ML Engineer — Biomedical Deep Learning &amp; Full-Stack Product</b><br>
+  I take research-grade ML from raw data to shipped, served systems.<br>
+  <sub>@ Sudha Gopalakrishnan Brain Centre, IIT Madras</sub>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/roshan-kumar-v-a-m/"><img src="https://img.shields.io/badge/LinkedIn-Roshan%20Kumar-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:roshaniitmsgbc@gmail.com"><img src="https://img.shields.io/badge/Email-roshaniitmsgbc%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Deep%20Learning-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white">
-  <img src="https://img.shields.io/badge/CV-YOLO%20%7C%20SAM%20%7C%20Cellpose-00897B?style=flat-square">
-  <img src="https://img.shields.io/badge/Backend-FastAPI%20%7C%20NestJS-009688?style=flat-square&logo=fastapi&logoColor=white">
-  <img src="https://img.shields.io/badge/Frontend-Next.js%20%7C%20React-000000?style=flat-square&logo=nextdotjs&logoColor=white">
-  <img src="https://img.shields.io/badge/Infra-Docker%20%7C%20Postgres%20%7C%20Redis-2496ED?style=flat-square&logo=docker&logoColor=white">
+  <img src="https://img.shields.io/badge/CV-YOLO%20%7C%20SAM%20%7C%20UNet%20%7C%20DeepLabV3%2B-00897B?style=flat-square">
+  <img src="https://img.shields.io/badge/SSL-SimCLR%20%7C%20Contrastive-6A1B9A?style=flat-square">
+  <img src="https://img.shields.io/badge/MLOps-MLflow%20%7C%20FastAPI%20%7C%20CUDA-009688?style=flat-square">
+  <img src="https://img.shields.io/badge/Product-Next.js%20%7C%20NestJS%20%7C%20Postgres-000000?style=flat-square&logo=nextdotjs&logoColor=white">
 </p>
 
 ---
 
 ### About
 
-I build production AI systems at the intersection of **computational neuroscience** and **applied machine learning** — from whole-brain histology pipelines processing tens of thousands of gigapixel sections, to multi-tenant SaaS platforms running real client workloads.
+I work at the intersection of **biomedical deep learning** and **production software** — and I own the whole path, not a slice of it. On the research side I build whole-slide-image pipelines over **gigapixel human-brain histology**: detection, self-supervised representation learning, segmentation, and morphometric quantification. On the product side I ship **multi-tenant SaaS and real-time desktop AI** that real users depend on.
 
-My work spans the full stack: deep-learning model training and morphometric analysis, GPU-backed inference services, async APIs, and the deployment infrastructure to run it all.
+The thing I'm good at is the **hand-off that usually breaks**: turning a model that works in a notebook into something served, monitored, and trusted by a domain expert. Pre-trained backbones, contrastive SSL, class-imbalanced segmentation, GPU inference services, typed APIs, safe production migrations — I've had to make all of it actually run.
 
-> **A note on code:** Several projects below were built under institutional or client IP agreements. These repositories document the **architecture, methodology, and results** rather than source. Code or a live walkthrough is available on request under NDA.
+I like **messy, open-ended problems** where the spec isn't written yet, and I learn whatever the problem needs.
+
+> **A note on code:** Several projects below were built under institutional or client IP agreements, so these repos document **architecture, methodology, and measured results** rather than source. Code or a live walkthrough is available on request under NDA.
+
+---
+
+### Selected impact
+
+- **0.717 mIoU** best model in a controlled 3-architecture brain-region segmentation benchmark (Mask2Former · Attention U-Net · DeepLabV3+).
+- **0.0352** validation loss segmenting astrocytes with a **SimCLR-pretrained UNet** — beating a MedSAM baseline, trained from detection-derived masks with no manual pixel labels.
+- **Gigapixel scale** — pipelines designed for the centre's archive standard of **~10,000 serial sections per brain**.
+- **Live production SaaS** — multi-tenant platform carrying real client workloads, hardened against destructive-migration data loss.
 
 ---
 
@@ -28,26 +45,22 @@ My work spans the full stack: deep-learning model training and morphometric anal
 
 | Project | What it does | Stack |
 |---|---|---|
-| **[Astrocyte Detection & Segmentation](./astrocyte-detection-segmentation)** | Detects and segments astrocytes in gigapixel brain histology; outputs per-cell morphometrics at scale | YOLO · DAB deconvolution · FastAPI |
-| **[Astrocyte Signature Learning](./astrocyte-signature-clustering)** | Unsupervised discovery of astrocyte morphotypes from thousands of cell crops — no labels | UMAP · clustering · feature engineering |
-| **[Brain Region Auto-Annotation](./brain-region-auto-annotation)** | Automatic annotation of anatomical regions across whole-brain sections | Segmentation · GeoJSON · OpenSeadragon |
-| **[iBird — Catering SaaS](./ibird-catering-saas)** | Multi-tenant catering / commissary management platform serving live clients | Next.js · NestJS · Postgres · Railway |
-| **[Cuepilot](./cuepilot)** | Real-time on-screen meeting assistant: live transcription + AI answers | Electron · Whisper · OpenAI API |
+| 🧠 **[Astrocyte Detection & Segmentation](./astrocyte-detection-segmentation)** | Detection → self-supervised (SimCLR) → UNet segmentation over gigapixel GFAP histology; served via MLflow + FastAPI | YOLOv5 · SimCLR · UNet · MLflow |
+| 🗺️ **[Brain Region Auto-Annotation](./brain-region-auto-annotation)** | 3-model benchmark for whole-section anatomical region segmentation; best **mIoU 0.717** | DeepLabV3+ · Attn-UNet · GeoJSON |
+| 🔬 **[Astrocyte Signature Learning](./astrocyte-signature-clustering)** | Unsupervised discovery of astrocyte morphotypes from thousands of cell crops — no labels | SSL · UMAP · clustering |
+| 🍽️ **[iBird — Catering SaaS](./ibird-catering-saas)** | Multi-tenant catering / commissary platform serving a live client | Next.js · NestJS · Postgres |
+| 🎙️ **[Cuepilot](./cuepilot)** | Real-time desktop assistant: live transcription + AI summaries | Electron · Whisper · OpenAI |
 
 ---
 
-### Focus Areas
+### What I bring
 
-`Medical Imaging` · `Whole-Slide Image (WSI) Pipelines` · `Instance Segmentation` · `Unsupervised Representation Learning` · `MLOps & GPU Orchestration` · `Multi-tenant SaaS`
+**Research / ML** — WSI pipelines · instance & semantic segmentation · self-supervised / contrastive learning · class-imbalance & long-tail handling · curriculum learning · transfer learning · morphometric analysis
+
+**Product / Engineering** — FastAPI & NestJS services · multi-tenant Postgres · GPU inference & MLOps (MLflow, mixed precision) · Next.js/React front-ends · safe production deployment
 
 ---
 
 ### Reach me
 
-📧 roshaniitmsgbc@gmail.com &nbsp;·&nbsp; 🔗 _LinkedIn — add your URL_ &nbsp;·&nbsp; 🧠 Sudha Gopalakrishnan Brain Centre, IIT Madras
-
-<!--
-  HOW TO USE THIS FILE:
-  Create a PUBLIC repo named EXACTLY your GitHub username (e.g. github.com/roshan -> repo "roshan").
-  Put this file in it as README.md. It then renders on your profile homepage automatically.
--->
+📧 [roshaniitmsgbc@gmail.com](mailto:roshaniitmsgbc@gmail.com) &nbsp;·&nbsp; 🔗 [LinkedIn](https://www.linkedin.com/in/roshan-kumar-v-a-m/) &nbsp;·&nbsp; 🧠 Sudha Gopalakrishnan Brain Centre, IIT Madras
