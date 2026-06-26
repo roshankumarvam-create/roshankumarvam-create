@@ -48,7 +48,7 @@ I like **messy, open-ended problems** where the spec isn't written yet, and I le
 | 🧠 **[Astrocyte Detection & Segmentation](https://github.com/roshankumarvam-create/astrocyte-detection-segmentation)** | Detection → self-supervised (SimCLR) → UNet segmentation over gigapixel GFAP histology; served via MLflow + FastAPI | YOLOv5 · SimCLR · UNet · MLflow |
 | 🗺️ **[Brain Region Auto-Annotation](https://github.com/roshankumarvam-create/brain-region-auto-annotation)** | 3-model benchmark for whole-section anatomical region segmentation; best **mIoU 0.717** | DeepLabV3+ · Attn-UNet · GeoJSON |
 | 🔬 **[Astrocyte Signature Learning](https://github.com/roshankumarvam-create/astrocyte-signature-clustering)** | Unsupervised discovery of astrocyte morphotypes from thousands of cell crops — no labels | SSL · UMAP · clustering |
-| 🍽️ **[iBird — Catering SaaS](https://github.com/roshankumarvam-create/ibird-catering-saas)** | Multi-tenant catering / commissary platform serving a live client | Next.js · NestJS · Postgres |
+| 🏢 **[Multi-Tenant B2B SaaS — Architecture](https://github.com/roshankumarvam-create/multi-tenant-saas-architecture)** | Production multi-tenant SaaS system design: tenant isolation, async pipelines, billing, observability — diagrams + ADRs | NestJS · Next.js · Postgres |
 | 🎙️ **[Cuepilot](https://github.com/roshankumarvam-create/cuepilot)** | Real-time desktop assistant: live transcription + AI summaries | Electron · Whisper · OpenAI |
 
 ---
