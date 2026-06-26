@@ -26,7 +26,7 @@ What I am good at is the hand-off that usually breaks: turning a model that work
 
 I like messy, open-ended problems where the spec is not written yet, and I learn whatever the problem needs.
 
-> A note on code: several projects below were built under institutional or client IP agreements, so these repos document architecture, methodology, and measured results rather than source. Code or a live walkthrough is available on request under NDA.
+> A note on code: several of these projects were built under institutional or client agreements. The repos document the architecture, methods, and measured results, and the source stays private. Code or a live walkthrough is available on request under NDA.
 
 ### Selected impact
 
